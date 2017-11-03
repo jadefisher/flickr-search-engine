@@ -88,7 +88,7 @@
       };
 
       function refresh() {
-        if (vm.searchQuery && vm.searchQuery.trim()) {
+        if (vm.searchQuery && vm.searchQuery.trim() != "") {
           $log.debug("searching for " + vm.searchQuery);
 
           vm.heading = 'Loading...';
