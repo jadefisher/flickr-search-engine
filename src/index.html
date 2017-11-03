@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>3wks Flickr Search Engine Code Test</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div ng-app="flickrSearchEngine">
+  <div id="header">
+    <h1>Flickr Search Engine Code Test</h1>
+  </div>
+
+  <div id="content" ng-controller="mainCntrl as vm">
+    <input type="text"
+           placeholder="Start typing to find photos..."
+           ng-model="vm.searchQuery"
+           ng-model-options="{
+        'updateOn': 'default blur',
+        'debounce': {
+          'default': 200,
+          'blur': 0
+         }
+        }">
+
+    <gallery search-query="vm.searchQuery"/>
+  </div>
+
+
+  <div id="footer">
+    Copyright &copy; 2017 Jade Fisher
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<script src="app/app.module.js"></script>
+
+</body>
+</html>

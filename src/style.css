@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* This makes sure that the padding and eventually borders are included in the total width
+and height of the elements.  */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  min-height: 100%;
+  margin: 0;
+  padding-bottom: 47px; /* leave room for footer */
+  position: relative;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-size: larger;
+}
+
+/* Display images as cards */
+image-card {
+  display:inline-block;
+  position:relative;
+  margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+image-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+image-card .thumbdetail {
+  padding: 2px 16px;
+  max-width: 256px;
+}
+
+image-card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+
+/* Truncate long titles */
+.title {
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+/* Truncate long authors */
+.author {
+  height: 2em;
+  color: #7F8C8D;
+  font-size: smaller;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow:hidden;
+  white-space: nowrap;
+}
+
+/* Truncate long tags */
+.tags {
+  color: #2980B9;
+  height: 1em; /* 1em is the current font size */
+  line-height: 1em;
+  font-size: small;
+  font-weight: 400;
+  margin-bottom: 12px;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow:hidden;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#header {
+  background-color: #2980B9;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+#content {
+  padding: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  min-height: 47px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background-color: #999999;
+  color: white;
+  text-align: right;
+  font-size: small;
+}
+
