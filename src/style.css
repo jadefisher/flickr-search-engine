@@ -33,7 +33,7 @@ input[type=text] {
 image-card {
   display:inline-block;
   position:relative;
-  margin: 10px;
+  margin: 10px 10px 10px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
@@ -45,7 +45,7 @@ image-card:hover {
 
 image-card .thumbdetail {
   padding: 2px 16px;
-  max-width: 256px;
+  width: 256px;
 }
 
 image-card img {
